@@ -26,7 +26,7 @@ func (st StepType) String() string {
 }
 
 type Step interface {
-	Resolve(treeCtx interface{}) *Result
+	Resolve(treeCtx interface{}) Result
 	GetType() StepType
 }
 
@@ -35,7 +35,7 @@ type Bindable interface {
 }
 
 type Result struct {
-	StepInfo *StepInfo
+	StepInfo StepInfo
 	Value    interface{}
 	Err      error
 }
