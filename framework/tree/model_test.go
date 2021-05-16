@@ -91,9 +91,6 @@ func Test_tree_Resolve(t *testing.T) {
 				intSlice: []int{10, 10, 10, 9},
 			},
 			want: Result{
-				StepInfo: StepInfo{
-					StepType: USE_CASE,
-				},
 				Value: UseCaseName("gte10_with_odd"),
 			},
 		},
@@ -105,9 +102,6 @@ func Test_tree_Resolve(t *testing.T) {
 				intSlice: []int{10, 10, 10, 8},
 			},
 			want: Result{
-				StepInfo: StepInfo{
-					StepType: USE_CASE,
-				},
 				Value: UseCaseName("gte10_without_odd"),
 			},
 		},
@@ -119,9 +113,6 @@ func Test_tree_Resolve(t *testing.T) {
 				intSlice: []int{10, 10, 10, 5},
 			},
 			want: Result{
-				StepInfo: StepInfo{
-					StepType: USE_CASE,
-				},
 				Value: UseCaseName("lt10_with_five"),
 			},
 		},
@@ -133,9 +124,6 @@ func Test_tree_Resolve(t *testing.T) {
 				intSlice: []int{10, 10, 10, 4},
 			},
 			want: Result{
-				StepInfo: StepInfo{
-					StepType: USE_CASE,
-				},
 				Value: UseCaseName("lt10_without_five"),
 			},
 		},
