@@ -35,12 +35,6 @@ type Bindable interface {
 }
 
 type Result struct {
-	StepInfo StepInfo
-	Value    interface{}
-	Err      error
-}
-
-type StepInfo struct {
-	StepType StepType
-	Next     Step
+	Value interface{}
+	Err   error
 }

@@ -21,13 +21,6 @@ type leafs struct {
 	False Step
 }
 
-func NewLeafs(trueLeaf, falseLeaf Step) leafs {
-	return leafs{
-		False: falseLeaf,
-		True:  trueLeaf,
-	}
-}
-
 type node struct {
 	Condition Condition
 	Leafs     *leafs
@@ -74,9 +67,6 @@ func (uc useCase) GetType() StepType {
 
 func (uc useCase) Resolve(treeCtx interface{}) Result {
 	return Result{
-		StepInfo: StepInfo{
-			StepType: USE_CASE,
-		},
 		Value: uc.Name,
 	}
 }
